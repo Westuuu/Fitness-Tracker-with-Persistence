@@ -19,6 +19,8 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":data"))
     implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+    implementation("io.github.cdimascio:dotenv-java:2.3.2")
+
 }
 
 application {
