@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/8"
+      fx:controller="com.fitness.tracker.app.ui.TrainingSessionController"
+      spacing="10"
+      style="-fx-padding: 20;">
+
+    <Label text="Log Training Session" 
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+           
+    <Label fx:id="workoutLabel" 
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+    <DatePicker fx:id="sessionDatePicker" promptText="Select Date"/>
+
+    <Label text="Add Exercises" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <ComboBox fx:id="exerciseComboBox" promptText="Select Exercise"/>
+        <TextField fx:id="setsField" promptText="Sets"/>
+        <TextField fx:id="weightField" promptText="Weight"/>
+        <TextField fx:id="unitField" promptText="Unit (kg/lbs)"/>
+        <Button text="Add Exercise" onAction="#handleAddExercise"/>
+    </HBox>
+
+    <TableView fx:id="exercisesTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="exerciseColumn" text="Exercise"/>
+            <TableColumn fx:id="setsColumn" text="Sets"/>
+            <TableColumn fx:id="weightColumn" text="Weight"/>
+            <TableColumn fx:id="unitColumn" text="Unit"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancel" 
+                onAction="#handleCancel"
+                style="-fx-background-color: #cccccc;"/>
+        <Button text="Log Session" 
+                onAction="#handleLogSession"
+                style="-fx-background-color: green; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fitness.tracker.app.ui.GoalSettingController"
+      spacing="10"
+      alignment="CENTER"
+      style="-fx-padding: 20;">
+
+    <Label text="Set New Fitness Goal"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <Label text="Select Exercise" style="-fx-font-weight: bold;"/>
+    <ComboBox fx:id="exerciseTypeComboBox"
+              promptText="Choose Exercise"
+              style="-fx-font-size: 14px;"
+              maxWidth="300"/>
+
+    <Label text="Select Goal Type" style="-fx-font-weight: bold;"/>
+    <ComboBox fx:id="goalTypeComboBox"
+              promptText="Choose Goal Type"
+              style="-fx-font-size: 14px;"
+              maxWidth="300"/>
+
+    <Label text="Target Value" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="targetValueField"
+               promptText="Enter Target Value"
+               style="-fx-font-size: 14px;"
+               maxWidth="300"/>
+
+    <Label text="Deadline" style="-fx-font-weight: bold;"/>
+    <DatePicker fx:id="deadlinePicker"
+                promptText="Select Deadline"
+                style="-fx-font-size: 14px;"
+                maxWidth="300"/>
+
+    <Button text="Create Goal"
+            onAction="#handleCreateGoal"
+            style="-fx-background-color: green; -fx-text-fill: white;"
+            maxWidth="300"/>
+</VBox>

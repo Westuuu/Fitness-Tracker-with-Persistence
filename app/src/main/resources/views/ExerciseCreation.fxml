@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fitness.tracker.app.ui.ExerciseCreationController"
+      spacing="10"
+      style="-fx-padding: 20;">
+
+    <Label text="Add New Exercise" 
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="exerciseNameField" 
+               promptText="Exercise Name"/>
+
+    <TextField fx:id="exerciseTypeField" 
+               promptText="Exercise Type"/>
+
+    <HBox spacing="10">
+        <Button text="Save Exercise" onAction="#handleSaveExercise"/>
+        <Button text="Cancel" onAction="#handleCancel"/>
+    </HBox>
+</VBox> 

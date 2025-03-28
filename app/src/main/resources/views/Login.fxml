@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fitness.tracker.app.ui.LoginController"
+      alignment="CENTER"
+      spacing="10"
+      prefHeight="300"
+      prefWidth="400">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Fitness Tracker Login" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="nameField"
+               promptText="Enter Name"
+               style="-fx-font-size: 14px;"/>
+
+    <TextField fx:id="emailField"
+               promptText="Enter Email"
+               style="-fx-font-size: 14px;"/>
+
+    <Button text="Login"
+            onAction="#handleLogin"
+            style="-fx-background-color: green; -fx-text-fill: white;"/>
+
+    <Button text="Register"
+            onAction="#handleRegister"
+            style="-fx-background-color: blue; -fx-text-fill: white;"/>
+</VBox>

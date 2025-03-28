@@ -1,0 +1,25 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+    <persistence-unit name="fitness_tracker">
+        <class>com.fitness.tracker.data.models.AppUser</class>
+        <class>com.fitness.tracker.data.models.UserExercise</class>
+        <class>com.fitness.tracker.data.models.Exercise</class>
+        <class>com.fitness.tracker.data.models.ExerciseDetail</class>
+        <class>com.fitness.tracker.data.models.Workout</class>
+        <class>com.fitness.tracker.data.models.TrainingSession</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/fitness_tracker" />
+            <property name="jakarta.persistence.jdbc.user" value="adam" />
+            <property name="jakarta.persistence.jdbc.password" value="a" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.use_sql_comments" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.current_session_context_class" value="thread" />
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform" />
+        </properties>
+    </persistence-unit>
+</persistence>

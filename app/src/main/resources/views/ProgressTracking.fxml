@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/8"
+      fx:controller="com.fitness.tracker.app.ui.ProgressTrackingController"
+      spacing="15"
+      style="-fx-padding: 20;">
+
+    <Label text="Progress Tracking" 
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Select Exercise:"/>
+        <ComboBox fx:id="exerciseComboBox" prefWidth="200"/>
+    </HBox>
+
+    <Label fx:id="progressLabel" 
+           style="-fx-font-size: 14px;"/>
+
+    <LineChart fx:id="progressChart" 
+               title="Progress Over Time"
+               legendVisible="true"
+               createSymbols="true">
+        <xAxis>
+            <CategoryAxis label="Date" tickLabelRotation="45"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Weight" autoRanging="true"/>
+        </yAxis>
+    </LineChart>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Close" onAction="#handleClose"/>
+    </HBox>
+</VBox>

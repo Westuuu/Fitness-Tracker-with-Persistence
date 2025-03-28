@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ScrollPane?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fitness.tracker.app.ui.DashboardController"
+      spacing="10"
+      style="-fx-padding: 20;">
+
+    <Label fx:id="welcomeLabel"
+           text="Welcome!"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <Button text="Create Workout" onAction="#handleCreateWorkout"/>
+        <Button text="Set Goal" onAction="#handleCreateGoal"/>
+        <Button text="Log Training Session" onAction="#handleLogTrainingSession"/>
+        <Button text="View Progress" 
+                onAction="#handleViewProgress"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </HBox>
+
+    <Label text="Available Exercises" style="-fx-font-size: 18px;"/>
+    <TableView fx:id="exercisesTable" prefHeight="150"/>
+    <HBox spacing="10">
+        <Button text="Add Exercise" onAction="#handleAddExercise"/>
+        <Button text="Edit Exercise" onAction="#handleEditExercise"/>
+        <Button text="Delete Exercise" onAction="#handleDeleteExercise"/>
+    </HBox>
+
+    <Label text="Your Workouts" style="-fx-font-size: 18px;"/>
+    <TableView fx:id="workoutsTable" prefHeight="150"/>
+    <HBox spacing="10">
+        <Button text="Edit Workout" onAction="#handleEditWorkout"/>
+        <Button text="Delete Workout" onAction="#handleDeleteWorkout"/>
+        <Button text="View Training History" onAction="#handleViewTrainingHistory"/>
+    </HBox>
+
+    <Label text="Your Goals" style="-fx-font-size: 18px;"/>
+    <TableView fx:id="goalsTable" prefHeight="150"/>
+    <HBox spacing="10">
+        <Button text="Edit Goal" onAction="#handleEditGoal"/>
+        <Button text="Delete Goal" onAction="#handleDeleteGoal"/>
+    </HBox>
+
+    <Label text="Your Training Sessions" style="-fx-font-size: 18px;"/>
+    <TableView fx:id="sessionsTable" prefHeight="150"/>
+    <HBox spacing="10">
+        <Button text="View Details" onAction="#handleViewSessionDetails"/>
+        <Button text="Delete Session" onAction="#handleDeleteSession"/>
+    </HBox>
+</VBox>
